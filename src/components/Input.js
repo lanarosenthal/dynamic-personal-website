@@ -13,13 +13,13 @@ const Input = ({ dispatchAddToDo }) => {
       <input onChange={e => setText(e.target.value)} />
       <br></br>
       <input onChange={e => setImg(e.target.value)} />
-      <button onClick={() => dispatchAddToDo({text, img})}> Add Todo </button>
+      <button onClick={() => dispatchAddToDo(text, img)}> Add Todo </button>
     </>
   )
 }
 
 const mapDispatchToProps = dispatch => ({
-  dispatchAddToDo: input => dispatch(addTodo(input))
+  dispatchAddToDo: (text, img) => dispatch(addTodo(text, img))
 })
 
 export default connect(null, mapDispatchToProps)(Input)
