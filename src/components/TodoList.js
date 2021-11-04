@@ -38,7 +38,7 @@ return(
         <br></br> 
         <Button style ={{ width: `50%`, margin: `auto`}} onClick={() => dispatchToggleToDo(todo.id)}> Delete </Button>
         <br></br>
-        <Button style ={{ width: `50%`, margin: `auto`}} onClick={() => dispatchToggleEditing(todo.id, todo.title, todo.todotext, todo.todoimg)}> Edit </Button>
+        <Button style ={{ width: `50%`, margin: `auto`}} onClick={() => dispatchToggleEditing(todo.id, todo.todotitle, todo.todotext, todo.todoimg)}> Edit </Button>
       </div>
       </Card>
      
