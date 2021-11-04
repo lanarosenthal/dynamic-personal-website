@@ -6,30 +6,35 @@ export const TOGGLE_TO_DO = 'TOGGLE_TO_DO'
 export const TOGGLE_EDITING = 'TOGGLE_EDITING'
 export const SET_STATUS = 'SET_STATUS'
 
-export const addTodo = (text, img) => ({
+export const addTodo = (title, text, img) => ({
   type: ADD_TO_DO,
   id: id++,
+  todotitle: title,
   todotext: text,
   todoimg: img,
   completed: false, 
   editing: false
 })
 
-export const editTodo = (id, text, img) => ({
+
+export const editTodo = (id,title, text, img) => ({
   type: EDIT_TO_DO,
   id,
+  todotitle: title,
   todotext: text,
   todoimg: img
 })
+
 
 export const toggleTodo = id => ({
   type: TOGGLE_TO_DO,
   id
 })
 
-export const toggleEditing = (id, text, img) => ({
+export const toggleEditing = (id, title, text, img) => ({
   type: TOGGLE_EDITING,
   id,
+  todotitle: title,
   todotext: text,
   todoimg: img
 })
